@@ -1,14 +1,10 @@
-# 3.	Write a Python program that takes two lists and returns True if they have at least one common element.
-# Creating a list with duplicates
-my_list_1 = list( set([1, 2,4, 2, 3]) ) 
-my_list_2 = list( set([4,5,6,7]) )
-empty_list =[]
-bool  = False
-for i in my_list_1:
-    if i in my_list_2:
-        empty_list.append(i)
-        bool = True
+# 3.	Initialize a variable with a string and print each character until the letter 'o' is encountered, using a break statement
+# Initialize a string variable
+my_string = "Hello, World!"
+# Iterate through each character in the string
+for char in my_string:
+    # Print the character
+    print(char)
+    # Break the loop if the character is 'o'
+    if char == 'o':
         break
-
-print(bool)
-print("Common elements:", empty_list)
