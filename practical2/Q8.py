@@ -18,12 +18,20 @@
 # print("All possible sublists of length", k, "are:", sublists)
 
 
-A =[1,2,[2,3],4,5,[6,7],[2,6]]
-user =list(map(int, input("Enter the sublist elements separated by space: ").split()))
-for c in A:
-    if(type(c)==list):
-        if c == user:
-            print(f"yes , sublidst is present in {A}")
-            break
+# Check if a list contains a specific sublist as a sequence
+
+main_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+sub_list = list(map(int, input("Enter the sublist elements separated by space: ").split()))
+
+flag = False
+for i in range(len(main_list) - len(sub_list) + 1):
+    if main_list[i:i+len(sub_list)] == sub_list:
+        flag = True
+        break
+
+if flag:
+    print(f"The sublist {sub_list} is present in the list {main_list}.")
+else:
+    print(f"The sublist {sub_list} is NOT present in the list {main_list}.")
 
 

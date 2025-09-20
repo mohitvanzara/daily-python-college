@@ -1,11 +1,12 @@
 # 3.	Write a Python program that takes two lists and returns True if they have at least one common element.
 # Creating a list with duplicates
-my_list_1 = list( set([1, 2,4, 2, 3]) ) 
-my_list_2 = list( set([4,5,6,7]) )
+my_list_1 = [1, 2,4, 4,2, 3]
+my_list_2 = [4,5,6,7]
 empty_list =[]
 bool  = False
-for i in my_list_1:
-    if i in my_list_2:
+
+for i in my_list_2:
+    if i in my_list_1:
         empty_list.append(i)
         bool = True
         break

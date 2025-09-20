@@ -1,8 +1,20 @@
-input_sublist =list(map(int, input("Enter the sublist elements separated by space: ").split()) )
-# list_a = [1, 2, 3, 4, 5, 6, 7, 8, 9]    
-# for a in range(len(list_a) - len(input_sublist) + 1):
-#     if list_a[a:a + len(input_sublist)] == input_sublist:
-#         print(f"The sublist {input_sublist} is present in the list {list_a}.")
-#         break
+ls = [1,1,1,1,4,4,4,3,3,1,2,2]
+# for i in set(ls):
+#     cnt =0
+#     for j in ls:
+#         if i==j:
+#             cnt+=1
+#     print(i,cnt)
 
-# print("the sublist is not present in the list")
+# i and j is my value not index
+
+
+# using frequency dictionary
+freq = {}
+for num in ls:
+    if num in freq:
+        freq[num]+=1
+    else:
+        freq[num]=1
+for key ,value in freq.items():
+    print(f'key:{key} value:{value}')
